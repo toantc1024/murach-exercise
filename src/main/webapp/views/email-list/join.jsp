@@ -32,8 +32,8 @@
 <div class="mx-auto p-2 d-flex justify-content-center align-items-center" style="height: 100vh;">
     <div style="width: 800px;">
         <div class="mb-3">
-            <h1 class="text-primary">Join my email list</h1>
-            <p>To join my email list, enter your name and email address below.</p>
+            <h1 class="text-primary">Join our email list</h1>
+            <p>To join our email list, to receive more updates from us about wonderful music.</p>
         </div>
         <p class="text-danger"><i>${errorMessage}</i></p>
         <form id="emailForm" action="email-list" method="post">
@@ -44,7 +44,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">First name</label>
-                <input name="firstName" type="text" class="form-control">
+                <input name="firstName" value="${firstName}" type="text" class="form-control">
             </div>
             <div class="mb-3">
                 <label class="form-label">Last name</label>

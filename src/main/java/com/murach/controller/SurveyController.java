@@ -36,7 +36,7 @@ public class SurveyController extends HttpServlet {
             wantsUpdates = "Yes";
         }
 
-        // store data in User object
+        // store data in UserEmail object
         SurveyUser user = new SurveyUser();
         user.setFirstName(firstName);
         user.setLastName(lastName);
@@ -45,7 +45,7 @@ public class SurveyController extends HttpServlet {
         user.setWantsUpdates(wantsUpdates);
         user.setContactVia(contactVia);
 
-        // store User object in request
+        // store UserEmail object in request
         request.setAttribute("user", user);
 
         // forward request to JSP

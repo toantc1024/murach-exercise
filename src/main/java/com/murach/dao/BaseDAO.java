@@ -14,17 +14,18 @@ public abstract class BaseDAO<T> {
         this.entityClass = entityClass;
     }
 
-    public void create(T entity) {
+    public T create(T entity) {
         EntityManager em = EntityManagerUtil.getEntityManager();
         try {
             em.getTransaction().begin();
             em.persist(entity);
             em.getTransaction().commit();
+            return entity;
         } catch (PersistenceException e) {
             if (em.getTransaction().isActive()) {
                 em.getTransaction().rollback();
             }
-            e.printStackTrace(); // Replace with logging in production
+            return null;
         } finally {
             em.close();
         }
@@ -54,12 +55,13 @@ public abstract class BaseDAO<T> {
         }
     }
 
-    public void update(T entity) {
+    public T update(T entity) {
         EntityManager em = EntityManagerUtil.getEntityManager();
         try {
             em.getTransaction().begin();
             em.merge(entity);
             em.getTransaction().commit();
+            return entity;
         } catch (PersistenceException e) {
             if (em.getTransaction().isActive()) {
                 em.getTransaction().rollback();
@@ -67,6 +69,7 @@ public abstract class BaseDAO<T> {
             e.printStackTrace(); // Replace with logging in production
         } finally {
             em.close();
+            return entity;
         }
     }
 

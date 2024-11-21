@@ -11,9 +11,9 @@
         <class>com.murach.dto.EmailListUser</class>
 
         <properties>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:4484/world"/>
-            <property name="jakarta.persistence.jdbc.user" value="root"/>
-            <property name="jakarta.persistence.jdbc.password" value="ToanTran2010@!"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://sql.freedb.tech:3306/freedb_tctoan1024"/>
+            <property name="jakarta.persistence.jdbc.user" value="freedb_tctoan1024"/>
+            <property name="jakarta.persistence.jdbc.password" value="KxB65Fw&amp;eMQ39k&amp;"/>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <!--            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>-->
             <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>

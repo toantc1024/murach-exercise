@@ -2,7 +2,6 @@ package com.murach.controller;
 
 import com.murach.dao.EmailListUserDAO;
 import com.murach.dto.EmailListUser;
-import com.murach.dto.User;
 import com.murach.util.EmailUtil;
 import com.murach.util.ValidateUtil;
 import jakarta.mail.MessagingException;
@@ -13,7 +12,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 @WebServlet(urlPatterns = "/email-list")
